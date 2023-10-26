@@ -33,6 +33,31 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 
+**Soluzione**
+
+#Dati
+
+1. L'utente inserisce se sceglie pari o dispari. const userChoice = prompt(""Scegli pari o dispari);
+2. L'utente inserisce un numero da 1 a 5. const userNum = parseInt(prompt(""Scegli un numero da 1 a 5));
+
+#Logica
+
+1. creo una funzione che mi crea un numero random da 1 a 5. Function rndNum (min, max){
+   return Math.floor(Math.random() \* (max - min) ) + min;
+
+} 2. assegno questo valore ad una const computerNum; 3. Sommo i due numeri: let somma = userNum + computerNum; 4. creo una funzione per sabilire se un numero è pari:
+function evenOrOdd(num){
+let found = false
+if(num % 2 === 0){
+found = true
+}
+return found;
+} 5. if (evenOrOdd(somma) && userChoice === "pari" || !evenOrOdd(somma) && userChoice === "dispari"){
+Console.log("Ha vinto il giocatore!);
+}
+else {
+console.log("Ha vinto il computer!")
+}
 **Consigli del giorno**
 
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
