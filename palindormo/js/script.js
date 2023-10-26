@@ -8,9 +8,22 @@ const userWord = prompt("Inserisci una parola che credi sia palindroma");
 //Definisco la funzione
 function IsItPalindrom(word) {
   let found = false;
+  let i = word.length - 1;
+  let palindromString = "";
+  while (i >= 0) {
+    palindromString += word[i];
+    i--;
+  }
+  console.log(palindromString);
+  if (palindromString === word) {
+    found = true;
+  }
+
+  /* let found = false;
   if (word[0] === word[word.length - 1]) {
     found = true;
   }
+ */
   return found;
 }
 
